@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff0f5 50%, #ffe4e1 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+
+        .petal {
+            position: absolute;
+            opacity: 0.7;
+            animation: fall 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .main-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin: 40px 0;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-title {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #e91e63, #ff6b9d, #ff8a80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2); }
+        }
+
+        .romantic-message {
+            font-size: 1.4rem;
+            color: #d81b60;
+            margin-bottom: 30px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .love-card {
+            background: linear-gradient(135deg, #fff 0%, #fce4ec 100%);
+            padding: 40px;
+            border-radius: 25px;
+            margin: 30px 0;
+            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15);
+            border: 2px solid rgba(233, 30, 99, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #e91e63, #ff6b9d, #ff8a80, #e91e63);
+            z-index: -1;
+            border-radius: 25px;
+            animation: borderGlow 3s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .love-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.1);
+            border: 1px solid rgba(233, 30, 99, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #c2185b;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .feature-text {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .surprise-section {
+            background: linear-gradient(135deg, #e91e63, #ad1457);
+            color: white;
+            padding: 50px;
+            border-radius: 25px;
+            margin: 40px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 4s linear infinite;
+            top: -50%;
+            left: -50%;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .surprise-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .unlock-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+            margin: 20px 0;
+        }
+
+        .unlock-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .poem-container {
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .poem-text {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .stanza {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #e91e63;
+            opacity: 0;
+            animation: fadeInStanza 1s ease-out forwards;
+        }
+
+        @keyframes fadeInStanza {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #ff6b9d, #e91e63);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff6b9d;
+            font-size: 20px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatUp {
+            0% { 
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-10vh) scale(0);
+            }
+        }
+
+        .memory-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .memory-box {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .memory-box:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .love-features {
+                grid-template-columns: 1fr;
+            }
+            .memory-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="heartsContainer"></div>
+    
+    <div class="container">
+        <div class="main-section">
+            <h1 class="main-title">Happy Girlfriend's Day</h1>
+            <p class="romantic-message">
+                To the most beautiful soul who lights up my world ✨<br>
+                Today is all about celebrating YOU 💕
+            </p>
+
+            <div class="love-card">
+                <div class="love-features">
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">🌹</span>
+                        <div class="feature-title">Your Beauty</div>
+                        <div class="feature-text">Inside and out, you're absolutely stunning</div>
+                    </div>
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">💝</span>
+                        <div class="feature-title">Your Heart</div>
+                        <div class="feature-text">So pure, loving and full of kindness</div>
+                    </div>
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">✨</span>
+                        <div class="feature-title">Your Smile</div>
+                        <div class="feature-text">It brightens up even my darkest days</div>
+                    </div>
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">🦋</span>
+                        <div class="feature-title">Your Spirit</div>
+                        <div class="feature-text">Free, beautiful and absolutely captivating</div>
+                    </div>
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">💫</span>
+                        <div class="feature-title">Your Dreams</div>
+                        <div class="feature-text">I want to support every single one</div>
+                    </div>
+                    <div class="feature-card" onclick="showMemory(this)">
+                        <span class="feature-icon">🔒</span>
+                        <div class="feature-title">Our Bond</div>
+                        <div class="feature-text">Unbreakable, real and forever strong</div>
+                    </div>
+                </div>
+
+                <div class="memory-gallery">
+                    <div class="memory-box" onclick="createSparkles(this)">💕</div>
+                    <div class="memory-box" onclick="createSparkles(this)">🌸</div>
+                    <div class="memory-box" onclick="createSparkles(this)">💖</div>
+                    <div class="memory-box" onclick="createSparkles(this)">🌺</div>
+                    <div class="memory-box" onclick="createSparkles(this)">💐</div>
+                    <div class="memory-box" onclick="createSparkles(this)">🎀</div>
+                </div>
+            </div>
+
+            <div class="surprise-section">
+                <h2 class="surprise-title">I Have Something Special For You</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; position: relative; z-index: 2;">
+                    Words straight from my heart, written just for you...
+                </p>
+                <button class="unlock-button" onclick="revealPoem()">
+                    💝 Unlock My Heart 💝
+                </button>
+
+                <div class="poem-container" id="poemContainer">
+                    <div class="poem-text">
+                        <div class="stanza">
+                            <div>We've had our storms, I won't deny,</div>
+                            <div>some days we drift, some nights we cry.</div>
+                            <div>But through the noise, through all the strain,</div>
+                            <div>you're still my peace, my constant flame.</div>
+                        </div>
+
+                        <div class="stanza">
+                            <div>I don't love you for the easy part,</div>
+                            <div>I love your soul, your honest heart.</div>
+                            <div>Even when we break or fall apart,</div>
+                            <div>we find our way, we restart.</div>
+                        </div>
+
+                        <div class="stanza">
+                            <div>We're not perfect, and that's okay,</div>
+                            <div>we fight, we pause, but always stay.</div>
+                            <div>No crack can end what we begin,</div>
+                            <div>we lose, we learn and then we win.</div>
+                        </div>
+
+                        <div class="stanza">
+                            <div>So here's to us, the real, the true,</div>
+                            <div>no matter what, I'll stand with you.</div>
+                            <div>This love won't fade, it won't decay,</div>
+                            <div>I'm yours in every single way.</div>
+                        </div>
+
+                        <div class="stanza">
+                            <div>I see my future in your eyes,</div>
+                            <div>in dreams we hold and days to come.</div>
+                            <div>You're not just mine for now or then,</div>
+                            <div>you're my forever, time and again.</div>
+                        </div>
+
+                        <div class="final-message">
+                            So on this day, I just want to say,<br>
+                            I'd choose you still, in every way.<br>
+                            <strong>Happy Girlfriend's Day, my life,<br>
+                            my heartbeat, my strength,<br>
+                            my future wife. ❤️</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💖', '💕', '💗', '💓'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heart.style.animationDuration = (Math.random() * 2 + 4) + 's';
+            
+            document.getElementById('heartsContainer').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        
+        setInterval(createFloatingHeart, 3000);
+
+        
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.innerHTML = ['🌸', '🌺', '🌼', '🌻'][Math.floor(Math.random() * 4)];
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.fontSize = (Math.random() * 15 + 20) + 'px';
+            petal.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            
+            document.body.appendChild(petal);
+            
+            setTimeout(() => {
+                petal.remove();
+            }, 8000);
+        }
+
+        setInterval(createPetal, 4000);
+
+       
+        function showMemory(card) {
+            card.style.background = 'linear-gradient(135deg, #ff6b9d, #e91e63)';
+            card.style.color = 'white';
+            card.style.transform = 'scale(1.05)';
+            
+            setTimeout(() => {
+                card.style.background = 'rgba(255, 255, 255, 0.9)';
+                card.style.color = '';
+                card.style.transform = '';
+            }, 1000);
+        }
+
+        
+        function createSparkles(element) {
+            for (let i = 0; i < 6; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.innerHTML = '✨';
+                    sparkle.style.position = 'absolute';
+                    sparkle.style.pointerEvents = 'none';
+                    sparkle.style.fontSize = '20px';
+                    sparkle.style.zIndex = '1000';
+                    
+                    const rect = element.getBoundingClientRect();
+                    sparkle.style.left = (rect.left + Math.random() * rect.width) + 'px';
+                    sparkle.style.top = (rect.top + Math.random() * rect.height) + 'px';
+                    
+                    sparkle.style.animation = 'sparkleAnim 1.5s ease-out forwards';
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1500);
+                }, i * 100);
+            }
+        }
+
+        
+        const sparkleCSS = `
+            @keyframes sparkleAnim {
+                0% { opacity: 0; transform: scale(0) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+                100% { opacity: 0; transform: scale(0) rotate(360deg); }
+            }
+        `;
+        const style = document.createElement('style');
+        style.textContent = sparkleCSS;
+        document.head.appendChild(style);
+
+        
+        function revealPoem() {
+            const button = document.querySelector('.unlock-button');
+            const container = document.getElementById('poemContainer');
+            
+            button.style.transform = 'scale(0.9)';
+            button.innerHTML = '💕 Opening my heart... 💕';
+            
+            setTimeout(() => {
+                container.style.display = 'block';
+                
+                
+                const stanzas = container.querySelectorAll('.stanza');
+                stanzas.forEach((stanza, index) => {
+                    stanza.style.animationDelay = (index * 0.5) + 's';
+                });
+                
+                button.style.display = 'none';
+                
+                
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(createFloatingHeart, i * 100);
+                }
+                
+            }, 500);
+        }
+
+        
+        window.addEventListener('load', function() {
+            
+            for (let i = 0; i < 5; i++) {
+                setTimeout(createFloatingHeart, i * 1000);
+            }
+            
+            
+            for (let i = 0; i < 3; i++) {
+                setTimeout(createPetal, i * 1500);
+            }
+        });
+    </script>
+</body>
+</html>
